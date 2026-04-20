@@ -41,7 +41,7 @@ export default function App() {
           }
         >
           <QueryClient>
-            <StoreProvider publicId="st_1abc00000200">
+            <StoreProvider publicId="st_1abc00000100">
               <AuthProvider>
                 <OrderProvider>
                   <CartProvider>
