@@ -13,22 +13,22 @@ export default function ContactPage() {
           <div class="bg-white rounded-lg border p-6 space-y-4">
             <div>
               <Text variant="body2" class="block text-sm font-medium mb-1">Name</Text>
-              <input type="text" placeholder="Your name" />
+              <input type="text" placeholder="Your name" class="flex h-10 w-full items-center justify-center rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
             </div>
 
             <div>
               <Text variant="body2" class="block text-sm font-medium mb-1">Email</Text>
-              <input type="email" placeholder="your@email.com" />
+              <input type="email" placeholder="your@email.com" class="flex h-10 w-full items-center justify-center rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
             </div>
 
             <div>
               <Text variant="body2" class="block text-sm font-medium mb-1">Subject</Text>
-              <input type="text" placeholder="How can we help?" />
+              <input type="text" placeholder="How can we help?" class="flex h-10 w-full items-center justify-center rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
             </div>
 
             <div>
               <Text variant="body2" class="block text-sm font-medium mb-1">Message</Text>
-              <textarea class="flex min-h-[120px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Your message..." />
+              <textarea class="flex min-h-[120px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="Your message..." />
             </div>
 
             <Button class="w-full">Send Message</Button>
@@ -36,7 +36,7 @@ export default function ContactPage() {
 
           <div class="mt-8 text-center text-sm text-muted-foreground">
             <Text variant="body2">Or reach us directly at:</Text>
-            <Text variant="body2" class="mt-1">support@electronics-store.com</Text>
+            <Text variant="body2" class="mt-1">hello@stylebox.com</Text>
             <Text variant="body2">+1 (555) 123-4567</Text>
           </div>
         </div>

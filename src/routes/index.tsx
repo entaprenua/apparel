@@ -37,11 +37,11 @@ function HeroSection() {
   )
 }
 
-function CategorySection() {
+function CollectionSection() {
   return (
     <section class="py-12 bg-background">
       <div class="container mx-auto px-4">
-        <Text variant="h2" class="text-2xl font-bold mb-8">Shop by Category</Text>
+        <Text variant="h2" class="text-2xl font-bold mb-8">Shop by Collection</Text>
         <CategoryList mode="root">
           <CategoryListEmptyView />
           <Grid cols={2} colsSm={2} colsMd={3} colsLg={4}>
@@ -102,7 +102,7 @@ function NewArrivalsSection() {
         <RecommendationsRoot type="newest" limit={8}>
           <RecommendationsItems>
             <RecommendationsContent>
-              <SectionTitle title="New Arrivals" />
+              <SectionTitle title="Just In" />
               <Grid cols={2} colsSm={2} colsMd={3} colsLg={4}>
                 <RecommendationsItemsView >
                   <ProductCard />
@@ -116,15 +116,15 @@ function NewArrivalsSection() {
   )
 }
 
-function PopularProductsSection() {
+function BestSellersSection() {
   return (
     <section class="py-12 bg-background">
       <div class="container mx-auto px-4">
         <RecommendationsRoot type="popular" limit={8}>
-          <SectionTitle title="Popular Products" />
+          <SectionTitle title="Best Sellers" />
           <RecommendationsItems>
             <RecommendationsContent>
-              <SectionTitle title="Popular Products" />
+              <SectionTitle title="Best Sellers" />
               <Grid cols={2} colsSm={2} colsMd={3} colsLg={4}>
                 <RecommendationsItemsView>
                   <ProductCard />
@@ -142,9 +142,9 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <CategorySection />
+      <CollectionSection />
       <NewArrivalsSection />
-      <PopularProductsSection />
+      <BestSellersSection />
     </>
   )
 }

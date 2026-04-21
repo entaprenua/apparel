@@ -10,16 +10,16 @@ export default function AboutPage() {
         <div class="bg-white rounded-lg border p-6">
           <Text variant="h2" class="text-xl font-semibold mb-4">Our Story</Text>
           <Text variant="body1" class="text-muted-foreground">
-            TechStore was founded in 2020 with a simple mission: to provide the latest electronics at the best prices. 
-            What started as a small online shop has grown into one of the most trusted retailers for tech enthusiasts worldwide.
+            StyleBox was founded in 2020 with a simple passion: to bring you the latest fashion trends at affordable prices. 
+            What started as a small online boutique has grown into a beloved destination for fashion lovers who appreciate quality and style.
           </Text>
         </div>
         
         <div class="bg-white rounded-lg border p-6">
           <Text variant="h2" class="text-xl font-semibold mb-4">Our Mission</Text>
           <Text variant="body1" class="text-muted-foreground">
-            We believe everyone deserves access to cutting-edge technology. That's why we work tirelessly to bring you 
-            the newest gadgets, most competitive prices, and exceptional customer service.
+            We believe everyone deserves to look and feel their best. That's why we curate the latest trends, 
+            source quality fabrics, and deliver fashion that fits your lifestyle.
           </Text>
         </div>
         
@@ -28,27 +28,27 @@ export default function AboutPage() {
           <Flex class="flex-col gap-3">
             <Flex class="items-center gap-3">
               <span class="text-primary">✓</span>
-              <Text variant="body1">Free shipping on orders over $50</Text>
+              <Text variant="body1">Trendy designs for every season</Text>
             </Flex>
             <Flex class="items-center gap-3">
               <span class="text-primary">✓</span>
-              <Text variant="body1">30-day hassle-free returns</Text>
+              <Text variant="body1">Quality materials</Text>
             </Flex>
             <Flex class="items-center gap-3">
               <span class="text-primary">✓</span>
-              <Text variant="body1">Expert customer support</Text>
+              <Text variant="body1">Affordable prices</Text>
             </Flex>
             <Flex class="items-center gap-3">
               <span class="text-primary">✓</span>
-              <Text variant="body1">Secure payment processing</Text>
+              <Text variant="body1">Free returns within 30 days</Text>
             </Flex>
           </Flex>
         </div>
         
         <div class="bg-white rounded-lg border p-6">
-          <Text variant="h2" class="text-xl font-semibold mb-4">Contact Us</Text>
+          <Text variant="h2" class="text-xl font-semibold mb-4">Get in Touch</Text>
           <Text variant="body1" class="text-muted-foreground">
-            Have questions? We'd love to hear from you. Reach out to us at support@techstore.com 
+            Have questions? We'd love to hear from you. Reach out to us at hello@stylebox.com 
             or call us at +1 (555) 123-4567.
           </Text>
         </div>

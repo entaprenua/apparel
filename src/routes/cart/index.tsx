@@ -8,7 +8,7 @@ import { Link } from "~/components/ui/link"
 export default function CartPage() {
   return (
     <div class="container mx-auto px-4 py-8 max-w-6xl">
-      <Text variant="h1" class="text-2xl font-bold mb-6">Shopping Cart</Text>
+      <Text variant="h1" class="text-2xl font-bold mb-6">Your Bag</Text>
       
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Cart Items */}
@@ -17,18 +17,18 @@ export default function CartPage() {
             <CartItemsView>
               <div class="space-y-4">
                 <div class="bg-white rounded-lg border p-4">
-                  <Flex gap={4} align="start">
-                    <CartItemCheckbox />
+                  <Flex gap={4} align="start" class="flex-col sm:flex-row">
+                    <div class="flex items-start shrink-0">
+                      <CartItemCheckbox />
+                    </div>
                     <Product class="flex gap-4 flex-1 min-w-0">
                       <ProductImage class="w-20 h-20 object-cover rounded-lg flex-shrink-0" />
-                      <div class="flex-1 min-w-0">
+                      <div class="flex flex-col gap-2 min-w-0 flex-1">
                         <ProductName class="font-medium truncate" />
-                        <ProductPrice class="text-sm text-muted-foreground mt-1" />
-                      </div>
-                      <div class="flex items-center gap-3">
-                        <ProductQuantityActions />
-                        <div class="flex flex-col items-end gap-1">
-                          <ProductRemoveFromCartTrigger class="text-muted-foreground hover:text-destructive" />
+                        <ProductPrice class="text-sm text-muted-foreground" />
+                        <div class="flex items-center gap-3">
+                          <ProductQuantityActions class="w-auto shrink-0" />
+                          <ProductRemoveFromCartTrigger class="text-muted-foreground hover:text-destructive shrink-0" />
                         </div>
                       </div>
                     </Product>
@@ -39,11 +39,11 @@ export default function CartPage() {
             
             <CartEmpty>
               <div class="bg-white rounded-lg border p-12 text-center">
-                <div class="text-6xl mb-4">🛒</div>
-                <h2 class="text-xl font-medium mb-2">Your cart is empty</h2>
-                <p class="text-muted-foreground mb-6">Looks like you haven't added anything to your cart yet.</p>
+                <div class="text-6xl mb-4">🛍️</div>
+                <h2 class="text-xl font-medium mb-2">Your bag is empty</h2>
+                <p class="text-muted-foreground mb-6">Looks like you haven't added any items to your bag yet.</p>
                 <Button as={Link} href="/products" class="px-6">
-                  Browse Products
+                  Shop Now
                 </Button>
               </div>
             </CartEmpty>

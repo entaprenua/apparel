@@ -1,42 +1,48 @@
-import { WishlistRoot, WishlistItems, WishlistItemsView, WishlistItemsEmpty } from "~/components/ui/wishlist"
-import { Product, ProductImage, ProductName, ProductPrice, ProductAddToCartTrigger, ProductRemoveFromWishlistTrigger } from "~/components/ui/product"
+import { WishlistItems, WishlistItemsView, WishlistEmpty, WishlistItem, WishlistItemCheckbox, WishlistItemRemoveTrigger } from "~/components/ui/wishlist"
+import { Product, ProductImage, ProductName, ProductPrice, ProductAddToCartTrigger } from "~/components/ui/product"
 import { Button } from "~/components/ui/button"
-import { Grid } from "~/components/ui/grid"
+import { Flex } from "~/components/ui/flex"
 import { Text } from "~/components/ui/text"
+import { Link } from "~/components/ui/link"
 
 export default function WishlistPage() {
   return (
-    <WishlistRoot>
-      <div class="container mx-auto px-4 py-8">
-        <Text variant="h1" class="text-3xl font-bold mb-8">My Wishlist</Text>
-        
-        <WishlistItems>
-          <Grid cols={2} colsSm={2} colsMd={3} colsLg={4} gap={6}>
-            <WishlistItemsView>
-              <Product class="group bg-white rounded-lg border m-1">
-                <div class="relative overflow-hidden rounded-lg">
-                  <ProductImage class="w-full aspect-square object-cover transition-transform group-hover:scale-105" />
-                  <div class="absolute top-2 right-2">
-                    <ProductRemoveFromWishlistTrigger class="p-2 bg-white/90 rounded-full hover:bg-white" />
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+      <Text variant="h1" class="text-2xl font-bold mb-6">Your Wishlist</Text>
+      
+      <WishlistItems>
+        <WishlistItemsView>
+          <div class="space-y-4">
+            <div class="bg-white rounded-lg border p-4">
+              <Flex gap={4} align="start" class="flex-wrap">
+                <WishlistItemCheckbox />
+                <Product class="flex gap-4 flex-1 min-w-0">
+                  <ProductImage class="w-20 h-20 object-cover rounded-lg flex-shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <ProductName class="font-medium truncate" />
+                    <ProductPrice class="text-sm text-muted-foreground mt-1" />
                   </div>
-                </div>
-                <div class="p-4">
-                  <ProductName class="font-medium line-clamp-2" />
-                  <ProductPrice class="font-bold mt-2" />
-                  <ProductAddToCartTrigger class="w-full mt-4" />
-                </div>
-              </Product>
-            </WishlistItemsView>
-          </Grid>
-          <WishlistItemsEmpty>
-            <div class="text-center py-12">
-              <h2 class="text-xl font-medium mb-2">No wishlist items yet</h2>
-              <p class="text-muted-foreground mb-4">Add products to your wishlist to save them for later</p>
-              <Button href="/products">Browse Products</Button>
+                  <div class="flex items-center gap-3">
+                    <ProductAddToCartTrigger class="shrink-0" />
+                    <WishlistItemRemoveTrigger class="text-muted-foreground hover:text-destructive shrink-0" />
+                  </div>
+                </Product>
+              </Flex>
             </div>
-          </WishlistItemsEmpty>
-        </WishlistItems>
-      </div>
-    </WishlistRoot>
+          </div>
+        </WishlistItemsView>
+        
+        <WishlistEmpty>
+          <div class="bg-white rounded-lg border p-12 text-center">
+            <div class="text-6xl mb-4">❤️</div>
+            <h2 class="text-xl font-medium mb-2">Your wishlist is empty</h2>
+            <p class="text-muted-foreground mb-6">Save items you love to your wishlist.</p>
+            <Button as={Link} href="/products" class="px-6">
+              Browse Collection
+            </Button>
+          </div>
+        </WishlistEmpty>
+      </WishlistItems>
+    </div>
   )
 }

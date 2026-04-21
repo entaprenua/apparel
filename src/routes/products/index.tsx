@@ -58,12 +58,12 @@ function SearchSection() {
         }
       >
         <SearchControl>
-          <SearchInput placeholder="Search products..." />
+          <SearchInput placeholder="Search our collection..." />
         </SearchControl>
         <SearchContent>
           <SearchListbox />
           <SearchNoResult class="px-4 py-2 text-sm text-muted-foreground">
-            No products found
+            No items found
           </SearchNoResult>
         </SearchContent>
       </ProductSearch>
@@ -89,7 +89,7 @@ function ProductsSection() {
 export default function ProductsPage() {
   return (
     <div class="container mx-auto px-4 py-8">
-      <SectionTitle title="All Products" />
+      <SectionTitle title="Our Collection" />
       <SearchSection />
       <ProductsSection />
     </div>
